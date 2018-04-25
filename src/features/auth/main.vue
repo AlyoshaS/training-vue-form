@@ -21,6 +21,10 @@ export default {
       // Suponha que aqui exista uma chamada AJAX
       window.console.log(obj);
     },
+    doSignUp(obj) {
+      // Suponha que aqui exista uma chamada AJAX
+      window.console.log(obj);
+    },
   },
 };
 </script>
@@ -53,7 +57,7 @@ export default {
         <div class="login-form">
 
           <SignIn @do-sign-in="doSignIn"/>
-          <SignUp />
+          <SignUp @do-sign-up="doSignUp"/>
 
         </div>
       </div>
