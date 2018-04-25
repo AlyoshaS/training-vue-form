@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     navigate() {
-      // this.$emit('navigate', this.navigation);
+      this.$bus.$emit('navigate', this.navigation);
     },
     doSignIn(obj) {
       // Suponha que aqui exista uma chamada AJAX
