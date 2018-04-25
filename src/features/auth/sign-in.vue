@@ -10,9 +10,9 @@
 
       <input
         :class="{ invalid: $v.username.$dirty && $v.username.$invalid }"
+        @input="$v.username.$touch()"
         id="sign-in-user"
         type="text"
-        @input="$v.username.$touch()"
         class="input"
         v-model="username"
       >
@@ -59,7 +59,9 @@
     <div class="hr"></div>
 
     <div class="foot-lnk">
+
       <a href="#forgot">Forgot Password?</a>
+
     </div>
   </form>
 </div>
@@ -69,6 +71,7 @@
 import { required } from 'vuelidate/lib/validators';
 
 export default {
+  name: 'SignIn',
   mounted() {
     this.$bus.$on('navigate', this.reset);
   },
@@ -112,7 +115,6 @@ export default {
       }
     },
   },
-  name: 'SignIn',
 };
 </script>
 
