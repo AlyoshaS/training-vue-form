@@ -4,6 +4,7 @@ import HelloWorld from '@/features/HelloWorld';
 import EveAuth from '@/features/auth/main';
 import SignIn from '@/features/auth/sign-in';
 import SignUp from '@/features/auth/sign-up';
+import EventBus from '@/plugins/event-bus';
 
 
 Vue.use(Router);
@@ -29,6 +30,11 @@ export default new Router({
       path: '/',
       name: 'sign-up',
       component: SignUp,
+    },
+    {
+      path: '/',
+      name: 'event-bus',
+      component: EventBus,
     },
   ],
 });
